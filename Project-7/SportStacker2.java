@@ -1,0 +1,292 @@
+   import java.text.DecimalFormat;
+	/**
+	*	This class represents a sport stacker.
+	* 	The methods included: getName, getTimes, getNumTimesRecorded,
+	*	toString, addTime, increaseSize, removeSlowestTime, findFastestTime
+	*	computeAvgTime, computeMedianTime, findSlowestTime,
+	*	getPlayerCount, resetPlayerCount.
+	*	@author Walter James Conway
+	*	@version 10/19/2012
+	*/
+   public class SportStacker2
+   {
+      private String nameOfPerson;
+      private double[] timesArray;
+      private int numberOfTimes;
+      private static int numberOfPlayers = 0;
+      /**
+   	*
+   	*	@param name gets the name.
+   	*	@param numOfTimes gets the length of the array being sent over.
+   	*	@param times recieves the array from the driver program.
+   	*/
+      public SportStacker2(String name, int numOfTimes, double ... times)
+      {
+         nameOfPerson = name;
+         timesArray = times;
+         numberOfTimes = numOfTimes;
+         numberOfPlayers++;
+      }
+      /**
+   	*
+   	*	@return String that is the competitor's name.
+   	*/
+      public String getName()
+      {	
+         return nameOfPerson;
+      }
+      /**
+   	*
+   	*	@return double an array of times.
+   	*/
+      public double[] getTimes()
+      {
+      
+         return timesArray;
+      }
+   	/**
+   	*
+   	*	@return int elements in the array
+   	*/
+      public int getNumTimesRecorded()
+      {
+         int count = 0;
+         for (double arrayTime : timesArray)
+         {
+            if (arrayTime == 0)
+            {
+               count++;
+            }
+         }   
+         numberOfTimes = (timesArray.length - count);
+         return numberOfTimes;
+      }
+      /**
+   	*
+   	* @param newTime inputs a new time for the competitor.
+   	getNumTimesRecorded
+   	*/
+      public void addTime(double newTime)
+      {
+         if (getNumTimesRecorded() < timesArray.length)
+         {
+            timesArray[(timesArray.length
+               - (timesArray.length
+               - getNumTimesRecorded()))] = newTime;
+         }
+         else
+         {
+            increaseSize();
+            addTime(newTime);
+         }
+      
+      }
+   	/**
+   	*
+   	* Increases the size of the array by one element.
+   	*/
+      public void increaseSize()
+      {
+         double[] tempArray = new double[(timesArray.length + 1)];
+         int count = 0;
+         for (double arrayTime : timesArray)
+         {
+            tempArray[count] = arrayTime;
+            count++;
+         }
+         timesArray = tempArray;
+      
+      }
+   	/**
+   	*
+   	* @return double removes the slowest time and
+   	*	returns the slowest time which was removed.
+   	*/
+      public double removeSlowestTime()
+      {
+         double slowestTime = 0;
+         if (getNumTimesRecorded() != 0)
+         {
+            double[] tempArray = new double[(timesArray.length)];
+            slowestTime = timesArray[0];
+            int count = 0;
+         //	Determines the slowest time
+            for (double arrayTime : timesArray)
+            {
+               if (arrayTime > slowestTime)
+               {
+                  slowestTime = arrayTime;
+               }
+            }
+         //	Does not allow the slowest time to be 'added'.
+            for (double arrayTime : timesArray)
+            {
+               if (slowestTime != arrayTime)
+                 
+               {
+                  tempArray[count] = arrayTime;
+                  count++;
+               }
+            }
+         
+            timesArray = tempArray;
+         }
+         return slowestTime;
+      }
+   	/**
+   	*
+   	* @return double finds the fastest time and returns the fastest time.
+   	*/
+      public double findFastestTime()
+      {
+      final int impossible = 9999999; //impossible fastest time
+         double fastestTime = 0;
+         if (getNumTimesRecorded() != 0)
+         {
+         
+         fastestTime = timesArray[0];
+         /**
+         * Sets fastest time to impossible if first array is zero,
+         * fixes zero being fastest number if it is the first element.
+         */
+         if (fastestTime == 0) 
+         {
+         fastestTime = impossible;
+         }
+            for (double arrayTime : timesArray)
+            {
+               if (arrayTime < fastestTime && arrayTime != 0)
+               {
+                  fastestTime = arrayTime;
+               }
+            }
+         }
+         return fastestTime;
+      }
+   	/**
+   	*
+   	*	@return double calculates the non-zero elements.
+   	*/
+      public double computeAvgTime()
+      {
+         DecimalFormat deci = new DecimalFormat("0.00");
+         double sumOfTime = 0;
+         int zeroElement = 0;
+         double averageOfTimes = 0;
+         if (timesArray.length != 0)
+         {
+            for (double arrayTime : timesArray)
+            {
+               if (arrayTime == 0)
+               {
+                  zeroElement++; // Calculates how many zeros are in the array.
+               }
+             /**	adds the zero arrays since adding zero doesn't
+             *		affect the outcome of the average.
+             */
+               sumOfTime += arrayTime;
+            }
+            //Calculates the average of the non-zero elements.
+            averageOfTimes += (sumOfTime / (timesArray.length - zeroElement)); 
+         }
+         return Double.parseDouble(deci.format(averageOfTimes));
+      }
+   	/**
+   	*
+   	*	@return int returns the number of players that were created.
+   	*/
+   
+      public static int getPlayerCount()
+      {
+      
+         return numberOfPlayers;
+      }
+   	
+   	/**
+   	*It resets the number of players created to zero.
+   	*/
+      public static void resetPlayerCount()
+      {
+         numberOfPlayers = 0;
+      }
+   	/**
+   	*
+   	*	@return double finds the slowest time in the array
+   	*	and returns the value.
+   	*/
+      public double findSlowestTime()
+      {
+         double slowestTime = 0;
+         if (getNumTimesRecorded() != 0)
+         {
+            slowestTime = timesArray[0];
+            for (double arrayTime : timesArray)
+            {
+               if (arrayTime > slowestTime && arrayTime != 0)
+               {
+                  slowestTime = arrayTime;
+               }
+            }
+         }
+         return slowestTime;
+      
+      }
+   /**
+   *
+   *	@return double finds the middle time if the
+   *	based off if the list has even or odd number
+   *	of elements.
+   */
+      public double computeMedianTime()
+      {
+         double medianTime = 0;
+         if (getNumTimesRecorded() != 0)
+         {
+            double[] temp = java.util.Arrays.copyOf(getTimes(),
+                getNumTimesRecorded());
+            java.util.Arrays.sort(temp, 0, getNumTimesRecorded());
+            
+         
+            if (getNumTimesRecorded() % 2 == 0) // if the array is even
+            {
+            
+               medianTime = (temp[(temp.length / 2) - 1]
+                   + temp[(temp.length / 2)]) / 2;
+            
+            }
+            else // if the array is odd
+            {
+            
+               medianTime = temp[((int) (temp.length / 2)) ];
+            }
+         }
+         return Double.parseDouble(
+            new DecimalFormat("0.##").format(medianTime));
+      }
+   
+   	
+   	/**
+   	*
+   	*	@return String which are name, times, and average of the competitor.
+   	*/
+      public String toString()
+      {
+         DecimalFormat deci = new DecimalFormat("0.00");
+         String output;
+         output = "Sport Stacker Name: "
+            + nameOfPerson
+            + "\nTimes: " + java.util.Arrays.toString(getTimes())
+            .replace('[', ' ').replace(']', ' ').replace(",", "").trim();
+      
+         output += "\nAverage Time: "
+            + deci.format(computeAvgTime());
+         output += "\nMedian Time: " + deci.format(computeMedianTime());
+         output += "\nFastest Time: " + deci.format(findFastestTime());
+         output += "\nSlowest Time: " + deci.format(findSlowestTime());
+         output += "\nPlayer Count: " + getPlayerCount();
+      		
+       
+         return output;
+      }
+   	
+   }

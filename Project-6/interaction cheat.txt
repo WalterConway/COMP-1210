@@ -1,0 +1,126 @@
+import java.util.ArrayList;
+StudentInvoiceList invoiceList;
+StudentInvoice s1 = new StudentInvoice("Pat Smith","0123",12000,0);
+StudentInvoice s2 = new StudentInvoice("Sam Jones","0124",11000,2500);
+StudentInvoice s3 = new StudentInvoice("Bee Bonnet","0125",10000,12500);
+ArrayList testList = new ArrayList();
+testList.add(s1);
+testList.add(s2);
+testList.add(s3);
+invoiceList = new StudentInvoiceList(testList);
+==================================================================
+import java.util.ArrayList;
+StudentInvoiceList invoiceList;
+ArrayList testList = new ArrayList();
+invoiceList = new StudentInvoiceList(testList);
+==================================================================
+
+      
+      
+      //          boolean isRemoved = false;
+      //          int index = 0;
+      //          while (index < studentInfo.size())
+      //          {
+      //             if (studentInfo.get(index).getStudentNumber()
+      // 				.compareTo(number) == 0)
+      //             {
+      //                studentInfo.remove(index);
+      //                isRemoved = true;
+      //                break;
+      //             }
+      //          
+      //             index++;
+      //          }
+      //          return isRemoved;
+      
+
+
+
+
+
+=======================
+
+ // int index = 0;
+         // while (index < studentInfo.size())
+         // {
+            // if (studentInfo.get(index).getStudentNumber()
+            // .compareTo(number) == 0)
+            // {
+               // studentInfo.get(index).setTuitionFees(fees);
+               // isSet = true;
+               // break;
+            // }
+         // 
+            // index++;
+         // }
+
+
+
+
+===========================
+         // while (index < studentInfo.size())
+         // {
+            // if (studentInfo.get(index).getStudentNumber()
+            // .compareTo(number) == 0)
+            // {
+               // fees = studentInfo.get(index).getTuitionFees();
+               // break;
+            // }
+            // else
+            // {
+               // fees = -1;
+            // }
+         // 
+            // index++;
+         // }
+==============================
+         // int index = 0;
+         // while (index < studentInfo.size())
+         // {
+            // if (studentInfo.get(index).getStudentNumber()
+            // .compareTo(number) == 0)
+            // {
+               // studentInfo.get(index).setScholarships(financialAid);
+               // isSet = true;
+            // }
+         // 
+            // index++;
+         // }
+
+================================
+
+         // int index = 0;
+         // while (index < studentInfo.size())
+         // {
+            // if (studentInfo.get(index).getStudentNumber()
+            // .compareTo(number) == 0)
+            // {
+               // financialAid = studentInfo.get(index).getScholarships();
+               // break;
+            // }
+            // else
+            // {
+               // financialAid = -1;
+            // }
+         // 
+            // index++;
+         // }
+=====================================
+// int index = 0;
+      //    
+         // while (index < studentInfo.size())
+         // {
+            // if (studentInfo.get(index).getStudentNumber()
+            // .compareTo(number) == 0)
+            // {
+               // studentPresent = studentInfo.get(index).toString() + "\n";
+               // break;
+            // }
+            // else
+            // {
+            // 
+               // studentPresent = "not found";
+            // }
+         //    
+            // index++;
+         // }

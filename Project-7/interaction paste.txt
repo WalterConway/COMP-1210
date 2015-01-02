@@ -1,0 +1,23 @@
+import java.util.Arrays;
+SportStacker2 s1 = new SportStacker2("Sami", 5, 4.5, 6.5, 6.0, 7.2, 6.3);
+SportStacker2 s2 = new SportStacker2("Walt", 5, 4.4, 8.8, 5.9, 7.7, 6.4);
+SportStacker2 s3 = new SportStacker2("John", 5, 4.5, 6.5, 6.1, 7.2, 6.3);
+
+
+
+double[] timesInList = {7.41, 8.86, 5.9, 7.78, 6.45, 5.88, 12.5,};
+double[] timesInList = {};
+SportStacker2 ss = new SportStacker2("nothing",0, timesInList);
+SportStacker2 ss = new SportStacker2(fname,NumOfElements,timesInList);
+
+double[] temp = java.util.Arrays.copyOf(timesInList, ss.getNumTimesRecorded());
+
+
+sum = 77.62
+avg = 9.7025
+
+
+            if(count == timesArray.length -1)
+         	{
+         	increaseSize();
+         	}

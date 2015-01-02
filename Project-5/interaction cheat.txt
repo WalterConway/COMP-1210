@@ -1,0 +1,15 @@
+import java.util.ArrayList;
+StudentInvoiceList invoiceList;
+StudentInvoice s1 = new StudentInvoice("Pat Smith","0123",12000,0);
+StudentInvoice s2 = new StudentInvoice("Sam Jones","0124",11000,2500);
+StudentInvoice s3 = new StudentInvoice("Bee Bonnet","0125",10000,12500);
+ArrayList testList = new ArrayList();
+testList.add(s1);
+testList.add(s2);
+testList.add(s3);
+invoiceList = new StudentInvoiceList(testList);
+==================================================================
+import java.util.ArrayList;
+StudentInvoiceList invoiceList;
+ArrayList testList = new ArrayList();
+invoiceList = new StudentInvoiceList(testList);

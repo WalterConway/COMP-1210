@@ -1,0 +1,25 @@
+public double removeSlowestTime()
+{
+double[] tempArray = new double[(timesArray.length)];
+ double slowestTime = timesArray[0];
+ int count = 0;
+ for (double arrayTime : timesArray)
+ {
+if (arrayTime > slowestTime)
+{
+ slowestTime = arrayTime;
+}
+ }
+ for (double arrayTime : timesArray)
+ {
+if (slowestTime != arrayTime)
+ 
+{
+ tempArray[count] = arrayTime;
+ count++;
+}
+ }
+ 
+ timesArray = tempArray;
+ return slowestTime;
+}

@@ -1,0 +1,22 @@
+public void addTime(double newTime)
+      {
+         int count = 0;
+         for (double arrayTime : timesArray)
+         {
+            if (arrayTime == 0)
+            {
+               timesArray[count] = newTime;
+               break;
+            }
+            else
+            {
+               count++; 
+            }
+            if ((count - 1) == timesArray.length - 1)
+            {
+               increaseSize();
+               addTime(newTime);
+            }
+         }
+      
+      }

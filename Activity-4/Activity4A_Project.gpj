@@ -1,0 +1,19 @@
+!656;s
+J
+SAU0PATH+=%<JGRASP_PATHS>%;
+SCU0PATH+=%<JGRASP_PATHS>%;\012CYGWIN=nodosfilewarning
+S+U0PATH+=%<JGRASP_PATHS>%;\012CYGWIN=nodosfilewarning
+SJU0CLASSPATH=+%;%<EXTENSION_CLASSPATHS>\012CLASSPATH+=%<JGRASP_CLASSPATHS>%;\012CLASSPATH+=.%;\012PATH+=%<JAVA_BIN_DIR>%;\012PATH+=%<JGRASP_PATHS>%;\012Compile\012NOT_FOUND_MESSAGE==Make sure you have the full JDK, not just the JRE, installed.\\nThe JDK is available from http://www.oracle.com/technetwork/java/index.html.\012Run_Applet +Debug_Applet\012ADD_APPLETVIEWER_CLASSPATH==Y\012Document\012CLASSPATH=+%;%<TOOL_CLASSPATHS>\012
+SOU0PATH+=%<JGRASP_PATHS>%;\012CYGWIN=nodosfilewarning
+SPU0
+s#i0
+s#k0
+s#j0
+s#l0
+!2873;d
+[\012  grasp [\012   legendy -93.5\012   legendx -171.0\012   version 1\012   winflags 2\012   height 472\012   width 494\012   wbp 1\012   initlayout 0\012   yoffs -34.0\012   xoffs 19.5\012   scale 1.0\012   args ""\012   otherflags 139\012   shallowjar 1\012   visflags 118423807\012  ]\012  directed 1\012  node [\012   ClassInfo [\012    fields "Activity4A\\011()V\\011c\\0111\\011\\011\\011Activity4A\011main\\011([Ljava/lang/String;)V\\011\\0119\\011\\011\\011Activity4A"\012    condition 0\012    access2 0\012    access 2490401\012    classname "Activity4A"\012    fromclassfiledate 1347420512426\012    fromclassfilename "%\011Activity4A.class"\012    fromfilename "%\011Activity4A.java"\012   ]\012   id 0\012   graphics [\012    center [\012     x -43.5\012     y 63.0\012     z 0.0\012    ]\012   ]\012   vgj [\012    flags 0\012   ]\012  ]\012  node [\012   ClassInfo [\012    fields "OFFLINE\\011I\\011\\01118\\011\\011\\011ProfileInformation\011ONLINE\\011I\\011\\01118\\011\\011\\011ProfileInformation\011age\\011I\\011\\0112\\011\\011\\011ProfileInformation\011firstName\\011Ljava/lang/String;\\011\\0112\\011\\011\\011ProfileInformation\011lastName\\011Ljava/lang/String;\\011\\0112\\011\\011\\011ProfileInformation\011location\\011Ljava/lang/String;\\011\\0112\\011\\011\\011ProfileInformation\011status\\011I\\011\\0112\\011\\011\\011ProfileInformation\011ProfileInformation\\011(Ljava/lang/String;Ljava/lang/String;)V\\011c\\0111\\011\\011\\011ProfileInformation\011getAge\\011()I\\011\\0111\\011\\011\\011ProfileInformation\011getLocation\\011()Ljava/lang/String;\\011\\0111\\011\\011\\011ProfileInformation\011logOff\\011()V\\011\\0111\\011\\011\\011ProfileInformation\011logOn\\011()V\\011\\0111\\011\\011\\011ProfileInformation\011setAge\\011(I)Z\\011\\0111\\011\\011\\011ProfileInformation\011setLocation\\011(Ljava/lang/String;)V\\011\\0111\\011\\011\\011ProfileInformation\011toString\\011()Ljava/lang/String;\\011\\0111\\011\\011\\011ProfileInformation"\012    condition 0\012    access2 0\012    access 2228257\012    classname "ProfileInformation"\012    fromclassfiledate 1347311068056\012    fromclassfilename "%\011ProfileInformation.class"\012    fromfilename "%\011ProfileInformation.java"\012   ]\012   id 1\012   graphics [\012    center [\012     x 43.5\012     y -63.0\012     z 0.0\012    ]\012   ]\012   vgj [\012    flags 0\012   ]\012  ]\012  edge [\012   ClassInfo [\012    dependencies "ProfileInformation\\011(Ljava/lang/String;Ljava/lang/String;)V\\011c\\011\\011\\011\\011ProfileInformation\011logOff\\011()V\\011\\011\\011\\011\\011ProfileInformation\011logOn\\011()V\\011\\011\\011\\011\\011ProfileInformation\011setAge\\011(I)Z\\011\\011\\011\\011\\011ProfileInformation\011setLocation\\011(Ljava/lang/String;)V\\011\\011\\011\\011\\011ProfileInformation"\012    type 3\012   ]\012   source 1\012   target 0\012  ]\012 ]!50;g
+%\011ProfileInformation.java
+%\011Activity4A.java
+!44;f
+%	ProfileInformation.java
+%	Activity4A.java

@@ -1,0 +1,21 @@
+import java.util.Arrays;
+int NumOfElements = 8;
+String fname ="Walt";
+double[] timesInList = {7.41, 8.86, 5.9, 7.78, 6.45, 5.88, 12.5, 9.0};
+SportStacker ss = new SportStacker(fname,NumOfElements,timesInList);
+
+
+
+
+
+
+
+
+sum = 77.62
+avg = 9.7025
+
+
+            if(count == timesArray.length -1)
+         	{
+         	increaseSize();
+         	}
